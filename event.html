@@ -161,14 +161,13 @@
     <body>
     
     <div id="gallery">
-      <!-- Replace the image URLs with your own -->
-      <img class="image" src="images/motorheads.jpg" alt="Image 1" onclick="openRegistrationModal('')">
-      <img class="image" src="images/motorheads.jpg" alt="Image 2" onclick="openRegistrationModal('registration_link_2')">
-      <img class="image" src="images/motorheads.jpg" alt="Image 3" onclick="openRegistrationModal('registration_link_3')">
-      <img class="image" src="images/motorheads.jpg" alt="Image 4" onclick="openRegistrationModal('registration_link_4')">
-      <img class="image" src="images/motorheads.jpg" alt="Image 5" onclick="openRegistrationModal('registration_link_5')">
-      <img class="image" src="images/motorheads.jpg" alt="Image 6" onclick="openRegistrationModal('registration_link_6')">
-      <img class="image" src="images/motorheads.jpg" alt="Image 7" onclick="openRegistrationModal('registration_link_7')">
+      
+      <img class="image" src="images/motorheads.jpg" alt="Image 1" data-image-name="Motorheads" data-registration-link="https://docs.google.com/forms/d/e/1FAIpQLSftjXUJllh5PV0tgZbupPUiOhTfSlgOY2hG5IQyHs3HF_zYdw/viewform" onclick="openRegistrationModal(this)">
+      <img class="image" src="images/motorheads.jpg" alt="Image 2" data-image-name="Another Image" data-registration-link="https://docs.google.com/forms/d/e/1FAIpQLSftjXUJllh5PV0tgZbupPUiOhTfSlgOY2hG5IQyHs3HF_zYdw/viewform" onclick="openRegistrationModal(this)">
+      <img class="image" src="images/motorheads.jpg" alt="Image 1" data-image-name="Motorheads" data-registration-link="https://docs.google.com/forms/d/e/1FAIpQLSftjXUJllh5PV0tgZbupPUiOhTfSlgOY2hG5IQyHs3HF_zYdw/viewform" onclick="openRegistrationModal(this)">
+      <img class="image" src="images/motorheads.jpg" alt="Image 2" data-image-name="Another Image" data-registration-link="https://docs.google.com/forms/d/e/1FAIpQLSftjXUJllh5PV0tgZbupPUiOhTfSlgOY2hG5IQyHs3HF_zYdw/viewform" onclick="openRegistrationModal(this)">
+      <img class="image" src="images/motorheads.jpg" alt="Image 1" data-image-name="Motorheads" data-registration-link="https://docs.google.com/forms/d/e/1FAIpQLSftjXUJllh5PV0tgZbupPUiOhTfSlgOY2hG5IQyHs3HF_zYdw/viewform" onclick="openRegistrationModal(this)">
+      <img class="image" src="images/motorheads.jpg" alt="Image 2" data-image-name="Another Image" data-registration-link="https://docs.google.com/forms/d/e/1FAIpQLSftjXUJllh5PV0tgZbupPUiOhTfSlgOY2hG5IQyHs3HF_zYdw/viewform" onclick="openRegistrationModal(this)">
     </div>
     
     <div id="registrationModal">
@@ -181,9 +180,15 @@
     </div>
     
     <script>
-      function openRegistrationModal(registrationLink) {
+      function openRegistrationModal(imageElement) {
+        var imageName = imageElement.getAttribute('data-image-name');
+        var registrationLink = imageElement.getAttribute('data-registration-link');
+    
         document.getElementById('registrationModal').style.display = 'flex';
         document.getElementById('registerLink').href = registrationLink;
+    
+        // You can use the imageName variable as needed, for example, display it in the modal
+        console.log('Image Name:', imageName);
       }
     
       function closeRegistrationModal() {
@@ -198,7 +203,9 @@
         }
       };
     </script>
+    
 
+    
     
 
 
@@ -250,12 +257,12 @@
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="#">Mechanical Engineering BMSIT&M</a>, All Right Reserved
                     </div>
+                    
                     <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                        <a href='http://www.freevisitorcounters.com'>Mechatron</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=67b4597c61791afa83ddf5f93f1dd3fabe48bc3f'></script>
+                        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1117196/t/13"></script>
+
+                            
                         </div>
                     </div>
                 </div>
